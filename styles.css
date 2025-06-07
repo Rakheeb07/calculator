@@ -1,0 +1,98 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 400px;
+    max-width: 90vw;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 100px;
+}
+
+.display .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.display .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    padding: 15px;
+    transition: 0.2s background-color ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.operator {
+    background-color: #FFB700;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #FFA000;
+}
+
+.equals {
+    background-color: #00C853;
+    color: white;
+}
+
+.equals:hover {
+    background-color: #00B248;
+}
+
+.clear, .delete {
+    background-color: #FF3D00;
+    color: white;
+}
+
+.clear:hover, .delete:hover {
+    background-color: #DD2C00;
+} 
